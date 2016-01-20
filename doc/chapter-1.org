@@ -102,4 +102,41 @@ Assuming that the find succeeds, the ~x~ variable is ~a(n)~:
 - [X] cursor
 - [ ] binary heap
 
-*
+* Inserts and queries using the node.js driver [0/1]
+
+** TODO Quiz
+
+Assuming that db is a MongoDB database handle, which of the following
+node.js code examples will print all documents in the collection named
+"movies" where the key "director" is equal to "George Lucas"?
+
+A:
+
+#+begin_javascript
+  db.collection('movies').find({ director: 'George Lucas' }, function(error, docs) {
+     console.log(docs);
+  });
+#+end_javascript
+
+B:
+
+#+begin_javascript
+   db.collection('movies').find({ director: 'George Lucas' }).toArray(function(error, docs) {
+      console.log(docs);
+   });
+#+end_javascript
+
+C:
+#+begin_javascript
+    console.log(db.collection('movies').find({ director: 'George Lucas' }));
+#+end_javascript
+
+D:
+#+begin_javascript
+    console.log(db.collection('movies').find({ director: 'George Lucas' }).toArray());
+#+end_javascript
+
+- [ ] A
+- [X] B
+- [ ] C
+- [ ] D
